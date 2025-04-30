@@ -9,3 +9,4 @@ In AWT, component class names are simple and do not have any prefixes—for exam
 3. Compare the event-handling of Swing and AWT applications
 
 Both Swing and AWT use the same event-handling mechanism based on the delegation event model. This means that components generate events, and listeners (like ActionListener, MouseListener, etc.) are used to handle them. However, Swing provides more flexibility in handling events. For example, Swing components support additional event types and offer features like anonymous inner classes and lambda expressions (from Java 8 onward), making the code cleaner and more manageable compared to older AWT applications.
+
