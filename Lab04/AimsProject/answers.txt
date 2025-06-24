@@ -1,12 +1,25 @@
-1. Compare the top-level containers in Swing and AWT
+Questions:
+Programming with AWT and Swing is quite similar (similar elements including container/components, and 
+event-handling). However, there are some differences that you need to note: 
+- Compare the top-level containers in Swing and AWT 
+- Compare the class name of components in AWT and the corresponding class’s name in Swing 
+- Compare the event-handling of Swing and AWT applications 
+The resulting appearances of the applications developed using Swing and AWT might be different as well. 
+Make comparisons
 
-AWT uses top-level containers like Frame, Dialog, and Panel. These are heavyweight components that rely on the operating system's native GUI resources. In contrast, Swing uses JFrame, JDialog, and JPanel as its top-level containers. Swing components are lightweight, meaning they are written entirely in Java and do not depend on the native system. This allows Swing to offer a more consistent look and feel across platforms and better flexibility in design.
+So sánh giữa AWT và Swing trong Java
 
-2. Compare the class name of components in AWT and the corresponding class’s name in Swing
+1. Container cấp cao (Top-level Containers)
+- AWT: Sử dụng các container nặng (heavyweight) như Frame, Dialog, dựa vào thành phần giao diện gốc của hệ điều hành → phụ thuộc nền tảng.
+- Swing: Dùng container nhẹ (lightweight) như JFrame, JDialog → hoạt động độc lập với hệ điều hành, giao diện nhất quán mọi nền tảng.
 
-In AWT, component class names are simple and do not have any prefixes—for example, Button, Label, and TextField. In Swing, the class names for similar components begin with the letter "J", such as JButton, JLabel, and JTextField. While both sets of components serve similar purposes, Swing components are more powerful and support more features, such as custom rendering and tooltips.
+2. Tên lớp thành phần (Component Class Names)
+- AWT: Tên đơn giản, không có tiền tố, ví dụ: Button, TextField, Label.
+- Swing: Có tiền tố "J", ví dụ: JButton, JTextField, JLabel, và hỗ trợ nhiều thành phần nâng cao như JTable, JTree.
 
-3. Compare the event-handling of Swing and AWT applications
-
-Both Swing and AWT use the same event-handling mechanism based on the delegation event model. This means that components generate events, and listeners (like ActionListener, MouseListener, etc.) are used to handle them. However, Swing provides more flexibility in handling events. For example, Swing components support additional event types and offer features like anonymous inner classes and lambda expressions (from Java 8 onward), making the code cleaner and more manageable compared to older AWT applications.
-
+3. Xử lý sự kiện (Event Handling)
+- AWT: Dùng các listener cơ bản trong gói java.awt.event (như ActionListener), phù hợp với ứng dụng đơn giản.
+- Swing: Kế thừa hệ thống AWT nhưng mở rộng thêm listener cho tương tác phức tạp hơn (như ChangeListener, ListSelectionListener).
+ Giao diện và độ tương thích (UI Appearance)
+- AWT: Giao diện phụ thuộc vào hệ điều hành → có thể không đồng nhất giữa các nền tảng.
+- Swing: Hỗ trợ nhiều giao diện (Look and Feel), có thể tùy chỉnh hoặc giả lập giao diện native → linh hoạt và đồng nhất hơn.
